@@ -1,0 +1,11 @@
+{
+  "name": "hyziu-03-library",
+  "version": "1.0.0",
+  "description": "A set of commonly used functions put in one place",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Szymon Hyziak aka Hyziu-03",
+  "license": "ISC"
+}
