@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="">
+    <meta name="title" content="">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Szymon Hyziak">
+    <meta name="theme-color" content="" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="">
+    <meta property="twitter:title" content="">
+    <meta property="twitter:description" content="">
+    <meta property="twitter:image" content="">
+
+    <link rel="apple-touch-icon" href="" />
+    <link rel="icon" href="" />
+
+    <title></title>
+
+    <!--[if lt IE 9]> 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" integrity="sha512-UDJtJXfzfsiPPgnI5S1000FPLBHMhvzAMX15I+qG2E2OAzC9P1JzUwJOfnypXiOH7MRPaqzhPbBGDNNj7zBfoA==" crossorigin="anonymous"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <script>
+        const registerServiceWorker = async() => {
+            if ('serviceWorker' in navigator) {
+                try {
+                    const registration = await navigator.serviceWorker.register('service-worker.js', { 
+                        scope: '.'
+                    });
+
+                    if (registration.installing) console.log('Service worker is being installed');
+                    else if (registration.waiting) console.log('Service worker has been installed');
+                    else if (registration.active) console.log('Service worker is active');
+                } catch (error) {
+                    console.error(error);
+                }
+            }
+        };
+
+        registerServiceWorker();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+$black: #2a2a2a
+$white: #efefef
+$gray: #303030
+
+$unit: 8px
+
+@mixin reset 
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    user-select: none
+
+    &:focus
+        outline-offset: $unit * 1/2
+
+@mixin lay-vertically 
+    display: flex
+    flex-direction: column
+
+@mixin be-clickable 
+    min-height: 48px
+    min-width: 48px
+
+@mixin use-link
+    text-decoration: none
+    color: inherit
+    @include be-clickable
+
+@mixin display-fullscreen
+    width: 100vw
+    height: 100vh
+
+@mixin center-flex-both-axes
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+
+@mixin center-absolute-both-axes 
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
