@@ -48,6 +48,8 @@ export const reportWebVitals = onPerfEntry => {
 
 // Common programming utilities:
 
+export const generateRandomColor = () => '#' + Math.floor(Math.random() * 0xffffff).toString(16).padEnd(6, '0');
+
 export const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
 export const validateName = (firstName, lastName) => !!firstName && !!lastName;
