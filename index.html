@@ -19,6 +19,7 @@
     <meta property="og:title" content="">
     <meta property="og:description" content="">
     <meta property="og:image" content="">
+
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="">
     <meta property="twitter:title" content="">
@@ -37,23 +38,7 @@
 
 <body>
     <script>
-        const registerServiceWorker = async() => {
-            if ('serviceWorker' in navigator) {
-                try {
-                    const registration = await navigator.serviceWorker.register('service-worker.js', { 
-                        scope: '.'
-                    });
-
-                    if (registration.installing) console.log('Service worker is being installed');
-                    else if (registration.waiting) console.log('Service worker has been installed');
-                    else if (registration.active) console.log('Service worker is active');
-                } catch (error) {
-                    console.error(error);
-                }
-            }
-        };
-
-        registerServiceWorker();
+        const registerServiceWorker=async()=>{if("serviceWorker"in navigator)try{const e=await navigator.serviceWorker.register("service-worker.js",{scope:"."});e.installing?console.log("Service worker is being installed"):e.waiting?console.log("Service worker has been installed"):e.active&&console.log("Service worker is active")}catch(e){console.error(e)}};registerServiceWorker();
     </script>
 </body>
 
